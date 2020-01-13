@@ -4,8 +4,10 @@ one:
   category: MyString
   reps: 1
   user: one
+  name: MyString
 
 two:
   category: MyString
   reps: 1
   user: two
+  name: MyString

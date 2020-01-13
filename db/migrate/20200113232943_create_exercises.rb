@@ -4,6 +4,7 @@ class CreateExercises < ActiveRecord::Migration[6.0]
       t.string :category
       t.integer :reps
       t.belongs_to :user, null: false, foreign_key: true
+      t.string :name
 
       t.timestamps
     end

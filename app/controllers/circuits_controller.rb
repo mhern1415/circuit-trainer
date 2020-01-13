@@ -1,0 +1,2 @@
+class CircuitsController < ApplicationController
+end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :circuits
   resources :workouts
   resources :sessions
   resources :users

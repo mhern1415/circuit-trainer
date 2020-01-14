@@ -4,4 +4,8 @@ class User < ApplicationRecord
     has_many :completed_exercises, through: :workouts, source: :exercises
     has_many :circuits, through: :workouts
     has_secure_password
+
+    validates :username, :email, presence: true
+    validates :username, uniqueness: true 
+    
 end

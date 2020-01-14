@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_13_234436) do
+ActiveRecord::Schema.define(version: 2020_01_14_230008) do
 
   create_table "circuits", force: :cascade do |t|
     t.datetime "date"
@@ -45,11 +45,11 @@ ActiveRecord::Schema.define(version: 2020_01_13_234436) do
 
   create_table "workouts", force: :cascade do |t|
     t.string "title"
-    t.integer "circuits"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+    t.integer "circuit_count"
   end
 
   add_foreign_key "circuits", "exercises"

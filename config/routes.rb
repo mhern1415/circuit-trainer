@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'circuits#index'
   resources :exercises
   resources :circuits
   resources :workouts

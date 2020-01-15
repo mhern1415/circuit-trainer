@@ -1,6 +1,7 @@
 class CircuitsController < ApplicationController
 
 def index
+    @circuits = current_user.circuits
 end
 
 def show

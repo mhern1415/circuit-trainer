@@ -9,3 +9,4 @@ class Workout < ApplicationRecord
 
     
 end
+ 

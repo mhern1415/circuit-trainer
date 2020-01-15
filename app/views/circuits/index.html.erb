@@ -1,0 +1,10 @@
+<h1>Your Circuits</h1>
+
+<% @circuits.each do |circuit|%>
+  <div>
+  
+    <p>Date: <%= circuit.date %> |
+  Category: <%= circuit.category %>
+ </p>
+  </div><br>
+<% end %>

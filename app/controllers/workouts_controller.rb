@@ -2,9 +2,9 @@ class WorkoutsController < ApplicationController
 
 
   def index
-    @workouts = current_user.workouts
+   
   end
-
+ 
   def show
     @workout = Workout.find_by(id: params[:id])
   end
@@ -15,7 +15,8 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @workout = current_user.workouts.build(workout_params)
+   
+    @workout = current_user.workouts.new(workout_params)
     if @workout.save
       redirect_to workout_path(@workout)
     else

@@ -5,7 +5,7 @@ def index
 end
 
 def show
-    @exercise = Exercise.find(params[:id])
+    @exercise = Exercise.find_by(id: params[:id])
 end
 
 def new

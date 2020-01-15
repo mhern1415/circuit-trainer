@@ -29,9 +29,12 @@
   
     <%= e.label :reps %>
     <%= e.number_field :reps, min: 0 %>
+
+   
+    <%= e.hidden_field :user_id, value: current_user.id %>
+
     <% end %>
     <br></br>
-
+    <%= f.submit%>
 <% end %>
 
-<%= f.submit%>

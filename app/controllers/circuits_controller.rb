@@ -3,12 +3,17 @@ class CircuitsController < ApplicationController
 def index
 end
 
+def show
+    @circuit = Circuit.find_by(id: params[:id])
+end
+
 def new
     @circuit = Circuit.new
     @circuit.build_exercise
 end
 
 def create
+    
     @circuit = Circuit.new(circuit_params)
     
     if @circuit.save

@@ -4,15 +4,19 @@
 
 <%= f.label :date %>
 <%= f.date_field :date %>
+<br></br>
 
 <%= f.label :category %>
 <%= f.select :category,options_for_select(["Low Intensity", "Medium Intensity", "High Intensity", "Marathon Training"]), include_blank: true  %>
+<br></br>
 
 <%= f.label :workout_id %>
 <%= f.collection_select :workout_id, Workout.all, :id, :title %>
+<br></br>
 
 <%= f.label :exercise_id %>
-<%= f.collection_select :exercise_id, Exercise.all, :id, :name %>
+<%= f.collection_select :exercise_id, Exercise.all, :id, :name, include_blank: true %>
+
 <h2>Or Create A New Exercise</h2>
 <%= f.fields_for :exercise do |e| %>
     <%= e.label :name %>
@@ -26,6 +30,8 @@
     <%= e.label :reps %>
     <%= e.number_field :reps, min: 0 %>
     <% end %>
+    <br></br>
+
+<% end %>
 
 <%= f.submit%>
-<% end %>

@@ -14,8 +14,12 @@ def show
 end
 
 def new
-    @circuit = Circuit.new
-    @circuit.build_exercise
+    if params[:exercise_id] && @exercise = Exercise.find_by_id(params[:exercise_id])
+        @circuit = @exercise.circuits.build 
+    else
+        @circuit = Circuit.new
+        @circuit.build_exercise
+    end
 end
 
 def create

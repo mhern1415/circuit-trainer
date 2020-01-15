@@ -13,7 +13,10 @@
 <%= f.label :workout_id %>
 <%= f.collection_select :workout_id, Workout.all, :id, :title %>
 <br></br>
-
+<% if @exercise %>
+<p> Exercise: <%= @exercise.name %></p>
+<%= f.hidden_field :exercise_id %>
+<% else %>
 <%= f.label :exercise_id %>
 <%= f.collection_select :exercise_id, Exercise.all, :id, :name, include_blank: true %>
 
@@ -34,7 +37,9 @@
     <%= e.hidden_field :user_id, value: current_user.id %>
 
     <% end %>
+    <% end %>
     <br></br>
     <%= f.submit%>
 <% end %>
+
 

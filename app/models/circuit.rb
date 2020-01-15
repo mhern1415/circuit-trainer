@@ -1,6 +1,9 @@
 class Circuit < ApplicationRecord
   belongs_to :workout
   belongs_to :exercise
+
+  scope :by_exercise, -> (exercise_id) {where("exercise_id = ?", exercise_id)}
+
   
   #accepts_nested_attributes_for :exercise 
   def exercise_attributes=(exercise_params)

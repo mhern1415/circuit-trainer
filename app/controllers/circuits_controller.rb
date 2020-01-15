@@ -1,7 +1,12 @@
 class CircuitsController < ApplicationController
 
 def index
-    @circuits = current_user.circuits
+    if params[:exercise_id] && @exercise = Exercise.find_by_id(params[:exercise_id])
+        #Exercise.find_by(id: params[:workout_id])
+        @circuits = @exercise.circuits
+    else
+        @circuits = Circuit.all
+    end
 end
 
 def show

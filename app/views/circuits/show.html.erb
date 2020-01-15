@@ -1,7 +1,14 @@
-<h1>Here is your new circuit </h1>
+<h1>Here is your circuit </h1>
 
-<%= @circuit.exercise.name %>
+<p>Workout: <%= @circuit.workout.title %></p>
+<br><br>
+<p>Circuit Date: <%= @circuit.date %></p>
+<br><br>
+<p>Circuit Category: <%= @circuit.category %></p>
+<br><br>
+<p>Exercise Name: <%= @circuit.exercise.name %></p>
+<br><br>
+<p>Exercise Reps: <%= @circuit.exercise.reps %></p>
+<br><br>
+<p>Exercise Category: <%= @circuit.exercise.category %></p>
 
-<%= @circuit.exercise.reps %>
-
-<%= @circuit.exercise.category %>

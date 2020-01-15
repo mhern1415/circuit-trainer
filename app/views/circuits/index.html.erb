@@ -1,10 +1,12 @@
 <h1>Your Circuits</h1>
 
-<% @circuits.each do |circuit|%>
-  <div>
-  
-    <p>Date: <%= circuit.date %> |
-  Category: <%= circuit.category %>
- </p>
-  </div><br>
+<% @circuits.order(:date).each do |t| %>
+  <li>
+    
+    <%= link_to t.exercise.name, exercise_path(t.exercise)%>
+   was done while in the <%= link_to t.workout.title, workout_path(t.workout)%> workout
+   
+
+
+  </li><br>
 <% end %>

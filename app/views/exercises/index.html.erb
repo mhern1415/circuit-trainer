@@ -1,10 +1,16 @@
 <h1> All Exercises </h1>
 
-<% @exercise.each do |exercise| %>
-    <br></br>
-    <%=exercise.category %>
-    <br></br>
-    <%=exercise.reps %>
-    <br></br>
-    <%=exercise.name %>
-    <% end %>
+
+<% @exercises.each do |exercise| %>
+<li>
+  <strong><%= exercise.name %></strong> -
+  <%=exercise.category %>  -
+  <%=exercise.reps %> - added by: <%= exercise.user.username %> |
+  <%= link_to "See all Circuit sessions", exercise_circuits_path(exercise)%> |
+  <%= link_to "Add a Circuit", new_exercise_circuit_path(exercise)%> |
+  <%= exercise.circuits.size %>
+
+</li>
+
+<% end %>
+</ul>

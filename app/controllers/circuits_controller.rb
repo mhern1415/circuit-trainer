@@ -4,6 +4,7 @@ def index
 end
 
 def new
+    @circuit = Circuit.new
 end
 
 def create

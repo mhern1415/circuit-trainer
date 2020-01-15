@@ -1,0 +1,31 @@
+<h1>Add Your Circuit Here</h1>
+
+<%= form_for @circuit do |f| %>
+
+<%= f.label :date %>
+<%= f.date_field :date %>
+
+<%= f.label :category %>
+<%= f.select :category,options_for_select(["Low Intensity", "Medium Intensity", "High Intensity", "Marathon Training"]), include_blank: true  %>
+
+<%= f.label :workout_id %>
+<%= f.collection_select :workout_id, Workout.all, :id, :title %>
+
+<%= f.label :exercise_id %>
+<%= f.collection_select :exercise_id, Exercise.all, :id, :name %>
+<h2>Or Create A New Exercise</h2>
+<%= f.fields_for :exercise do |e| %>
+    <%= e.label :name %>
+    <%= e.text_field :name %>
+      <br></br>
+  
+    <%= e.label :category %>
+    <%= e.select :category,options_for_select(["arms", "core", "legs", "cardio", "weights", "other"]), include_blank: true  %>
+      <br></br>
+  
+    <%= e.label :reps %>
+    <%= e.number_field :reps, min: 0 %>
+    <% end %>
+
+<%= f.submit%>
+<% end %>

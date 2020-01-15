@@ -4,12 +4,12 @@
     <%= f.text_field :title %>
     <br></br>
   
-    <%= f.label :circuits, "Number of Circuits" %>
-    <%= f.number_field :circuits, min: 0 %>
+    <%= f.label :circuit_count, "Number of Circuits" %>
+    <%= f.number_field :circuit_count, min: 0 %>
     <br></br>
   
-    <%= f.label :category %>
-    <%= f.select :category,options_for_select(["run", "swim", "bike", "triathalon", "other"]), include_blank: true %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
   
       <br></br>
   

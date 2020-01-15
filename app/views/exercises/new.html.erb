@@ -1,0 +1,21 @@
+  
+<h1>Add a New Exercise</h1>
+<%= form_for @exercise do |f| %>
+
+ <%= f.label :name %>
+  <%= f.text_field :name %>
+    <br></br>
+
+  <%= f.label :category %>
+  <%= f.select :category,options_for_select(["arms", "core", "legs", "cardio", "weights", "other"]), include_blank: true  %>
+    <br></br>
+
+  <%= f.label :reps %>
+  <%= f.number_field :reps, min: 0 %>
+  <br></br>
+
+    <br></br>
+
+  <%= f.submit%>
+
+<% end %>

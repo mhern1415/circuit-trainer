@@ -14,7 +14,9 @@
 
   <body>
     <%= link_to 'Logout', '/logout', method: :delete%>
-    
+    <%= link_to 'My Workouts', workouts_path , class:'button'%>
+    <%= link_to 'Add a Workout', new_workout_path , class:'button'%>
+    <%= link_to 'Add an Exercise', new_exercise_path , class:'button'%>
     <%= yield %>
   </body>
 </html>

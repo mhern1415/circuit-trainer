@@ -15,7 +15,7 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @workout = current_user.races.build(race_params)
+    @workout = current_user.workouts.build(workout_params)
     if @workout.save
       redirect_to workout_path(@workout)
     else
@@ -39,7 +39,7 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:title, :circuits, :description)
+    params.require(:workout).permit(:title, :circuit_count, :description)
   end
 
 end

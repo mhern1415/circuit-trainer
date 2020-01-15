@@ -6,7 +6,7 @@ class Workout < ApplicationRecord
     validates :title, :description, :circuits, presence: true
     validates :circuits, numericality: { message: "%{value} must be a number" } 
     
-    validate :not_a_duplicate
+   
 
     
 end

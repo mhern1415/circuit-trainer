@@ -8,8 +8,6 @@ class Circuit < ApplicationRecord
   #accepts_nested_attributes_for :exercise 
   def exercise_attributes=(exercise_params)
     exercise = Exercise.find_or_create_by(exercise_params)
-    #workout.valid? ? self.workout = workout : self.workout
-    #workout_params[:name].empty? ? self.workout : self.workout = workout
     if exercise.valid?
       self.exercise = exercise
     end

@@ -4,7 +4,7 @@ class Circuit < ApplicationRecord
 
   scope :by_exercise, -> (exercise_id) {where("exercise_id = ?", exercise_id)}
 
-  
+  validates :date, presence: true
   #accepts_nested_attributes_for :exercise 
   def exercise_attributes=(exercise_params)
     exercise = Exercise.find_or_create_by(exercise_params)

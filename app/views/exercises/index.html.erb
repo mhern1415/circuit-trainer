@@ -3,8 +3,8 @@
 
 <% @exercises.each do |exercise| %>
 <li>
-  <strong><%= exercise.name %></strong> -
-  <%=exercise.category %>  -
+  <strong>Exercise Name: </strong><%= exercise.name %> - <strong>Category: </strong>
+  <%=exercise.category %>  - <strong>Reps: </strong>
   <%=exercise.reps %> - added by: <%= exercise.user.username %> |
   <%= link_to "See all Circuit sessions", exercise_circuits_path(exercise)%> |
   <%= link_to "Add a Circuit", new_exercise_circuit_path(exercise)%> |

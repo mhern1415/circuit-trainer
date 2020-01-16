@@ -1,5 +1,7 @@
   
 <h1>Add a New Exercise</h1>
+<%= render partial: "layouts/errors", locals: { object: @exercise } %>
+
 <%= form_for @exercise do |f| %>
 
  <%= f.label :name %>

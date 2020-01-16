@@ -11,6 +11,9 @@
 <br></br>
 
 <%= f.label :workout_id %>
+
+<%= render partial: "layouts/errors", locals: { object: @circuit } %>
+
 <%= f.collection_select :workout_id, Workout.all, :id, :title %>
 <br></br>
 <% if @exercise %>

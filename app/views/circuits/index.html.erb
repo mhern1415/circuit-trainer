@@ -2,7 +2,7 @@
 
 <% @circuits.order(:date).each do |t| %>
   <li>
-    
+    <%= link_to t.date, circuit_path(t) %>
     <%= link_to t.exercise.name, exercise_path(t.exercise)%>
    was done while in the <%= link_to t.workout.title, workout_path(t.workout)%> workout
    

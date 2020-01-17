@@ -6,6 +6,7 @@ class WorkoutsController < ApplicationController
   
   def show
       @workout = Workout.find_by(id: params[:id])
+      @circuit = Circuit.find_by(id: params[:id])
   end
   
   def new

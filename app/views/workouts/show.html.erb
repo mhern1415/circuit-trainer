@@ -1,7 +1,5 @@
 <h1><%= @workout.title %></h1>
 
 <p><strong>Description:</strong> <%= @workout.description %> </p>
-<p><strong>Number of Circuits:</strong> <%= @workout.circuit_count %> miles </p>
-
-
-<%= link_to "Edit Race", edit_workout_path(@workout) %>
+<p><strong>Number of Circuits:</strong> <%= @workout.circuit_count %> circuits </p>
+<%= link_to "Edit Workout", edit_workout_path(@workout) %>

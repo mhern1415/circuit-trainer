@@ -13,4 +13,8 @@ class Circuit < ApplicationRecord
     end
   end
 
+  def username
+    @username ||= self.workout.try(:user).try(:username)
+  end
+
 end

@@ -1,5 +1,5 @@
 class CircuitsController < ApplicationController
-
+    skip_before_action :require_login, only: [:index]
 def index
     if params[:exercise_id] && @exercise = Exercise.find_by_id(params[:exercise_id])
         #Exercise.find_by(id: params[:workout_id])

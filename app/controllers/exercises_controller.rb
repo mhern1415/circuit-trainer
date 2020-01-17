@@ -1,5 +1,5 @@
 class ExercisesController < ApplicationController
-
+    skip_before_action :require_login, only: [:index, :show]
 def index
     @exercises = Exercise.most_used
 end

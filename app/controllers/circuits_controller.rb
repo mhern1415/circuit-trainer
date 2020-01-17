@@ -40,4 +40,6 @@ def circuit_params
     params.require(:circuit).permit(:date, :category, :workout_id, :exercise_id, exercise_attributes:[:name, :category, :reps])
 end
 
+
+
 end

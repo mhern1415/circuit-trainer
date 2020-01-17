@@ -5,4 +5,6 @@ class Exercise < ApplicationRecord
 
   validates :reps, presence: true
 
+  scope :most_used, -> { Exercise.left_joins(:circuits).group(:id).order("count(circuits.exercise_id) desc") }
+
 end

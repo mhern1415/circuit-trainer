@@ -1,7 +1,7 @@
 class ExercisesController < ApplicationController
 
 def index
-    @exercises = Exercise.all 
+    @exercises = Exercise.most_used
 end
 
 def show

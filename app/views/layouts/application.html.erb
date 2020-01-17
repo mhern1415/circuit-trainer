@@ -11,8 +11,9 @@
 
     
   </head>
-
   <body>
+  <% if logged_in? %>
+  
     <%= link_to 'Logout', '/logout', method: :delete%>
     <%= link_to 'Add a Workout', new_workout_path , class:'button'%>
     <%= link_to 'My Workouts', workouts_path , class:'button'%>
@@ -22,9 +23,10 @@
     <%= link_to 'All Exercises', exercises_path, class:'button' %>
     <%= link_to 'My Profile', users_path, class:'button' %>
  
+    <% else %>
 
-
-
+    <%= link_to 'Log In', login_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -4,3 +4,5 @@
 <p><%=@exercise.category %> </p>
 
 <p><%=@exercise.reps %> reps</p>
+
+<%= link_to "Add This Exercise to a Circuit", new_exercise_circuit_path(@exercise)%>

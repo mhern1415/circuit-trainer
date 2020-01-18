@@ -4,6 +4,9 @@ def index
     if params[:exercise_id] && @exercise = Exercise.find_by_id(params[:exercise_id])
         #Exercise.find_by(id: params[:workout_id])
         @circuits = @exercise.circuits
+    elsif params[:workout_id] && @workout = Workout.find_by_id(params[:workout_id])
+        
+        @circuits = @workout.circuits
     else
         @circuits = Circuit.all
     end
@@ -37,7 +40,7 @@ end
 private
 
 def circuit_params
-    params.require(:circuit).permit(:date, :category, :workout_id, :exercise_id, exercise_attributes:[:name, :category, :reps])
+    params.require(:circuit).permit(:date, :category, :workout_id, :exercise_id, exercise_attributes:[:name, :category, :reps, :user_id])
 end
 
 

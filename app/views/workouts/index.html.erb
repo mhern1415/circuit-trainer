@@ -5,5 +5,6 @@
     <h3><%= link_to workout.title, workout_path(workout) %> </h3>
     <p>Type: <%= workout.description %> |
     Circuit Count: <%= workout.circuit_count %> </p>
+    <%= link_to workout.title, workout_circuits_path(workout) %>
   </div><br>
 <% end %>

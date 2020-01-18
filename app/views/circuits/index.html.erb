@@ -1,13 +1,24 @@
-<h1>All Circuits</h1>
+
+
+<% if @exercise %>
+  <h1>Training Sessions for the  <%= @exercise.name %> workout</h1>
+ <% elsif @workout %>
+   <h1>Training Sessions for the <%= @workout.title %> race </h1>
+ <% else %>
+ <h1>All Circuits</h1>
+ <% end %>
+
+
+
 
 <% @circuits.order(:date).each do |t| %>
   <li>
-  <%= t.username %>
-    <%= link_to t.date, circuit_path(t) %>
+  <%= t.username %> completed a circuit on 
+    <%= link_to t.date.strftime("%A, %b %d"), circuit_path(t) %> where
     <%= link_to t.exercise.name, exercise_path(t.exercise)%>
    was done while in the <%= link_to t.workout.title, workout_path(t.workout)%> workout
    
-
+ 
 
   </li><br>
 <% end %>

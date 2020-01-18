@@ -3,12 +3,13 @@
 
 <% @exercises.each do |exercise| %>
 <li>
-  <strong>Exercise Name: </strong><%= exercise.name %> - <strong>Category: </strong>
+  <strong>Exercise Name: </strong><%= link_to exercise.name, exercise_path(exercise) %> - <strong>Category: </strong>
   <%=exercise.category %>  - <strong>Reps: </strong>
   <%=exercise.reps %> - <strong>Added By: </strong> <%= exercise.user.username %> |
   <%= link_to "See all Circuit sessions", exercise_circuits_path(exercise)%> |
   <%= link_to "Add a Circuit", new_exercise_circuit_path(exercise)%> |
   <%= exercise.circuits.size %> circuits with this exercise.
+  
 
 </li>
 

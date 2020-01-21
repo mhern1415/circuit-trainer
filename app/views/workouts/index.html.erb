@@ -4,9 +4,12 @@
   <div>
     <h3><%= link_to workout.title, workout_path(workout) %> </h3>
     <p>Type: <%= workout.description %> |
-    Circuit Count: <%= workout.circuit_count %> </p>
+    Planned Circuit Count: <%= workout.circuit_count %> </p>
     <%= link_to 'Circuits in this Workout', workout_circuits_path(workout) %>
     <%= workout.circuits.size %>
+    <br><br>
+    Circuits Remaining = 
+    <%= workout.circuit_count - workout.circuits.size %>
   </div><br>
 <% end %>
 

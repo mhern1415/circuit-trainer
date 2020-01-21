@@ -7,6 +7,8 @@ get '/logout' => 'sessions#destroy'
 get '/signup' => 'users#new'
 post '/signup' => 'users#create'
 get '/auth/:provider/callback' => 'sessions#omniauth'
+get '/users/:id', to: 'users#show'
+
 
 
   resources :exercises do

@@ -2,4 +2,8 @@
 
 <p><strong>Description:</strong> <%= @workout.description %> </p>
 <p><strong>Number of Circuits:</strong> <%= @workout.circuit_count %> circuits </p>
+
+
+<% if session[:user_id] == @workout.user_id %>
 <%= link_to "Edit Workout", edit_workout_path(@workout) %>
+<% end %>

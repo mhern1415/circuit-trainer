@@ -9,7 +9,8 @@ post '/signup' => 'users#create'
 get '/auth/:provider/callback' => 'sessions#omniauth'
 get '/users/:id', to: 'users#show'
 
-
+get 'about', to: 'static#about'
+get 'resources', to: 'static#resources'
 
   resources :exercises do
     resources :circuits, only: [:index, :new, :create]

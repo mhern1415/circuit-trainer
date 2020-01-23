@@ -11,23 +11,28 @@
 
     
   </head>
-  <body>
+
   <% if logged_in? %>
-  
-    <%= link_to 'Logout', '/logout', method: :delete%>
-    <%= link_to 'Add a Workout', new_workout_path , class:'button'%>
-    <%= link_to 'My Workouts', workouts_path , class:'button'%>
-    <%= link_to 'Add a Circuit', new_circuit_path, class:'button' %>
-    <%= link_to 'All Circuits', circuits_path, class:'button' %>
-    <%= link_to 'Add an Exercise', new_exercise_path , class:'button'%>
-    <%= link_to 'All Exercises', exercises_path, class:'button' %>
-    <%= link_to 'About', about_path, class:'button' %>
-    <%= link_to 'Resources', resources_path, class:'button' %>
-    
+  <div class="jumbotron text-center bg-primary text-warning">
+  <h1>Circuit Trainer</h1>
+  </div>
+  <nav class='navbar'>
+    <%= link_to 'Add a Workout', new_workout_path , class:'btn btn-primary text-warning'%>
+    <%= link_to 'My Workouts', workouts_path , class:'btn btn-primary text-warning'%>
+    <%= link_to 'Add a Circuit', new_circuit_path, class:'btn btn-primary text-warning' %>
+    <%= link_to 'All Circuits', circuits_path, class:'btn btn-primary text-warning' %>
+    <%= link_to 'Add an Exercise', new_exercise_path , class:'btn btn-primary text-warning'%>
+    <%= link_to 'All Exercises', exercises_path, class:'btn btn-primary text-warning' %>
+    <%= link_to 'About', about_path, class:'btn btn-primary text-warning' %>
+    <%= link_to 'Resources', resources_path, class:'btn btn-primary text-warning' %>
+    <%= link_to 'Logout', '/logout', class:'btn btn-primary text-warning', method: :delete%>
+  </nav>
     <% else %>
 
-    <%= link_to 'Log In', login_path %>
+    
     <% end %>
+    <div class='container'>
     <%= yield %>
-  </body>
+    </div>
+
 </html>

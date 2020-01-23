@@ -1,7 +1,19 @@
+<div class="jumbotron text-center bg-primary text-white">
 <h1>Welcome To Circuit Trainer</h1>
+</div>
 
-<%= link_to "Log In", "/login" %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4", style="background-color:gold;">
+    <h2><%= link_to "Log In", "/login", class:'btn btn-primary' %></h2>
+    </div>
+    <div class="col-sm-5", style="background-color:gold;">
+    <h2><%= link_to "Log In with Google", '/auth/google_oauth2', class:'btn btn-primary' %></h2>
+    </div>
+    <div class="col-sm-3", style="background-color:gold;">
+    <h2><%= link_to "Sign Up", "/signup", class:'btn btn-primary' %></h2>
+    </div>
+  </div>
+</div>
 
-<%= link_to "Log In with Google", '/auth/google_oauth2' %>
 
-<%= link_to "Sign Up", "/signup" %>

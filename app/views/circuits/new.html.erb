@@ -1,6 +1,9 @@
-<h1 class="text-center">Add Your Circuit Here</h1>
-
-<div class="text-center">
+<div class="container">
+<br>
+<h1 class="text-primary">Create a New Circuit</h1>
+<br>
+</div>
+<div class="container">
 <%= form_for @circuit do |f| %>
 
 <%= f.label :date %>
@@ -24,23 +27,6 @@
 <%= f.label :exercise_id %>
 <%= f.collection_select :exercise_id, Exercise.all, :id, :name, include_blank: true %>
 
-<h2>Or Create A New Exercise</h2>
-<%= f.fields_for :exercise do |e| %>
-    <%= e.label :name %>
-    <%= e.text_field :name %>
-      <br></br>
-  
-    <%= e.label :category %>
-    <%= e.select :category,options_for_select(["arms", "core", "legs", "cardio", "weights", "other"]), include_blank: true  %>
-      <br></br>
-  
-    <%= e.label :reps %>
-    <%= e.number_field :reps, min: 0 %>
-
-   
-    <%= e.hidden_field :user_id, value: current_user.id %>
-
-    <% end %>
     <% end %>
     <br></br>
     <%= f.submit%>

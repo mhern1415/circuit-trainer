@@ -1,7 +1,10 @@
-  
-<h1 class="text-center">Add a New Exercise</h1>
+<div class="container">
+<br>
+<h1 class="text-primary">Create a New Exercise</h1>
+<br>
+</div>
 <%= render partial: "layouts/errors", locals: { object: @exercise } %>
-<div class="text-center">
+<div class="container">
 <%= form_for @exercise do |f| %>
 
  <%= f.label :name %>

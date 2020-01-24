@@ -23,7 +23,7 @@
         <td class="text-center"><%=exercise.reps %></td>
         <td class="text-center"><%= exercise.user.username %></td>
         <td class="text-center"><%= link_to "See all Circuit sessions", exercise_circuits_path(exercise)%></td>
-        <td class="text-center"><%= link_to "Add a Circuit", new_exercise_circuit_path(exercise)%></td>
+        <td class="text-center"><%= link_to "Add to Circuit", new_exercise_circuit_path(exercise)%></td>
         <td class="text-center"><%= exercise.circuits.size %></td>
         <% end %>
       </tr>

@@ -1,7 +1,7 @@
   
-<h1>Add a New Exercise</h1>
+<h1 class="text-center">Add a New Exercise</h1>
 <%= render partial: "layouts/errors", locals: { object: @exercise } %>
-
+<div class="text-center">
 <%= form_for @exercise do |f| %>
 
  <%= f.label :name %>
@@ -21,3 +21,4 @@
   <%= f.submit%>
 
 <% end %>
+</div>

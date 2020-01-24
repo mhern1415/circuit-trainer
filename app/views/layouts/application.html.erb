@@ -16,7 +16,10 @@
   <div class="jumbotron text-center bg-primary text-warning">
   <h1>Circuit Trainer</h1>
   </div>
-  <nav class='navbar'>
+  <nav class='navbar .justify-content-center bg-warning'>
+  <a class="navbar-brand" href="#">
+  <img src="https://cdn2.iconfinder.com/data/icons/small-black-v10/512/fitness_workout_kettlebell_gym_exercise_fit_sport_health_bodybuilding-512.png" alt="Logo" style="width:40px;">
+  </a>
     <%= link_to 'Add a Workout', new_workout_path , class:'btn btn-primary text-warning'%>
     <%= link_to 'My Workouts', workouts_path , class:'btn btn-primary text-warning'%>
     <%= link_to 'Add a Circuit', new_circuit_path, class:'btn btn-primary text-warning' %>
@@ -31,7 +34,7 @@
 
     
     <% end %>
-    <div class='bg-warning text-white'>
+    <div class='bg-light text-body'>
     <%= yield %>
     </div>
 

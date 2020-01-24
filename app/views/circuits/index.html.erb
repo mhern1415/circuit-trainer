@@ -1,22 +1,23 @@
-
+<div class="container">
+<br>
 <% if @exercise %>
-<h1 class="text-center">Training Sessions for the  <%= @exercise.name %> workout</h1>
+<h1 class="text-center text-primary">Training Sessions for the  <%= @exercise.name %> workout</h1>
  <% elsif @workout %>
- <h1 class="text-center">Circuits in <%= @workout.title %> </h1>
+ <h1 class="text-center text-primary">Circuits in <%= @workout.title %> </h1>
  <% else %>
- <h1 class="text-center">All Circuits</h1>
+ <h1 class="text-center text-primary">All Circuits</h1>
  <% end %>
 
 
+<br>
 
-
-<table class="table table-striped table-bordered">
-    <thead>
+<table class="table table-striped table-bordered bg-warning">
+    <thead class="text-center text-primary">
       <tr>
-        <th class="text-center">Username</th>
-        <th class="text-center">Date</th>
-        <th class="text-center">Exercise</th>
-        <th class="text-center">Workout</th>
+        <th>Username</th>
+        <th>Date</th>
+        <th>Exercise</th>
+        <th>Workout</th>
       </tr>
       <% @circuits.order(:date).each do |t| %>
     </thead>
@@ -30,3 +31,5 @@
       </tr>
     </tbody>
   </table>
+
+</div>

@@ -1,9 +1,19 @@
-<h1><%= @workout.title %></h1>
+<br>
+<h1 class="text-center text-primary">Workout Details</h1>
+<br>
+<div class="d-flex justify-content-center">
+<div class="card bg-primary" style="width:300px">
+<img src="https://cdn2.iconfinder.com/data/icons/small-black-v10/512/fitness_workout_kettlebell_gym_exercise_fit_sport_health_bodybuilding-512.png" alt="Image" style="width:100%">
+<div class="card-body">
+  <h4 class="card-title"><%= @workout.title %></h4>
+  <p class="card-text"><strong>Description:</strong> <%= @workout.description %></p>
+  <p class="card-text"><strong>Number of Circuits:</strong> <%= @workout.circuit_count %> circuits </p>
+  <% if session[:user_id] == @workout.user_id %>
+  <%= link_to 'Edit Workout', edit_workout_path(@workout), class:'btn btn-warning' %>
+  <% end %>
+  <br><br>
+  <%= link_to 'Circuits in this Workout', workout_circuits_path(@workout), class:'btn btn-warning' %>
+</div>
+</div>
+</div>
 
-<p><strong>Description:</strong> <%= @workout.description %> </p>
-<p><strong>Number of Circuits:</strong> <%= @workout.circuit_count %> circuits </p>
-
-
-<% if session[:user_id] == @workout.user_id %>
-<%= link_to "Edit Workout", edit_workout_path(@workout) %>
-<% end %>

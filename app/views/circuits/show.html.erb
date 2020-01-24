@@ -1,14 +1,20 @@
-<h1>Here is your circuit </h1>
+<br>
+<h1 class="text-center text-primary">Circuit Details</h1>
+<br>
 
-<p>Workout: <%= @circuit.workout.title %></p>
-<br><br>
-<p>Circuit Date: <%= @circuit.date %></p>
-<br><br>
-<p>Circuit Category: <%= @circuit.category %></p>
-<br><br>
-<p>Exercise Name: <%= @circuit.exercise.name %></p>
-<br><br>
-<p>Exercise Reps: <%= @circuit.exercise.reps %></p>
-<br><br>
-<p>Exercise Category: <%= @circuit.exercise.category %></p>
+
+<div class="d-flex justify-content-center">
+<div class="card bg-primary" style="width:300px">
+<img src="https://cdn2.iconfinder.com/data/icons/small-black-v10/512/fitness_workout_kettlebell_gym_exercise_fit_sport_health_bodybuilding-512.png" alt="Image" style="width:100%">
+<div class="card-body">
+  <h4 class="card-title"><%= @circuit.date.strftime("%A, %b %d") %></h4>
+  <p class="card-text"><strong>Workout:</strong> <%= @circuit.workout.title %></p>
+  <p class="card-text"><strong>Circuit Category:</strong> <%= @circuit.category %></p>
+  <p class="card-text"><strong>Exercise Name:</strong> <%= @circuit.exercise.name %></p>
+  <p class="card-text"><strong>Exercise Reps:</strong> <%= @circuit.exercise.reps %></p>
+  <p class="card-text"><strong>Exercise Category:</strong> <%= @circuit.exercise.category %></p>
+  
+</div>
+</div>
+</div>
 

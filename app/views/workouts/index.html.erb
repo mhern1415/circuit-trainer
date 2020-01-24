@@ -4,13 +4,13 @@
 <br>
 <% @workouts.each do |workout|%>
   <div class="container p-3 my-3 bg-primary text-warning">
-    <h3><%=workout.title%> </h3>
-    <%= link_to 'See Details', workout_path(workout), class:'btn btn-warning' %>
-    <p>Description: <%= workout.description %></p>
-    <p>Planned Circuit Count: <%= workout.circuit_count %> </p>
-    <p>Actual Circuit Count: <%= workout.circuits.size %> </p>
-    <p>Circuits Remaining = <%= workout.circuit_count - workout.circuits.size %></p>
-    <%= link_to 'Circuits in this Workout', workout_circuits_path(workout), class:'btn btn-warning' %>
+    <h3 class="text-center"><%=workout.title%> </h3>
+    <p class="text-center"><%= link_to 'See Details', workout_path(workout), class:'btn btn-warning' %></p>
+    <p class="text-center">Description: <%= workout.description %></p>
+    <p class="text-center">Planned Circuit Count: <%= workout.circuit_count %> </p>
+    <p class="text-center">Actual Circuit Count: <%= workout.circuits.size %> </p>
+    <p class="text-center">Circuits Remaining = <%= workout.circuit_count - workout.circuits.size %></p>
+    <p class="text-center"><%= link_to 'Circuits in this Workout', workout_circuits_path(workout), class:'btn btn-warning' %></p>
 
   </div><br>
 <% end %>

@@ -1,5 +1,7 @@
-<h1> Sign Up For Circuit Trainer Here! </h1>
-
+<div class="container">
+<br>
+<h1 class="text-primary">Sign Up For Circuit Trainer Here!</h1>
+<br>
 <%= render partial: "layouts/errors", locals: { object: @user } %>
 
 <%= form_for @user do |f| %>  
@@ -17,6 +19,5 @@
     <%= f.password_field :password %>
     <br><br>
     <%= f.submit %>
-
-
 <% end %>
+</div>

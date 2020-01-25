@@ -24,7 +24,7 @@
     <tbody>
       <tr>
         <td class="text-center"><%= t.username %></td>
-        <td class="text-center"><%= link_to t.date.strftime("%A, %b %d"), circuit_path(t) %></td>
+        <td class="text-center"><%= link_to t.date.strftime("%A, %b %d, %Y"), circuit_path(t) %></td>
         <td class="text-center"><%= link_to t.exercise.name, exercise_path(t.exercise)%></td>
         <td class="text-center"><%= link_to t.workout.title, workout_path(t.workout)%></td>
         <% end %>

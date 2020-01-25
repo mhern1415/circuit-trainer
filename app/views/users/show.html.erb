@@ -1,11 +1,14 @@
-<h1>Welcome <%=@user.username%></h1>
+<div class="container text-center">
+<br>
+<h1 class="text-primary">Welcome <%=@user.username%></h1>
+<br>
 
-<p>Here are your top 3 workouts with the most circuits!</p>
-
+<p><h2 class="text-primary">Here are your top 3 workouts with the most circuits!</h2></p>
+<h4>
 <% @user.workouts.three_biggest_workouts.each do |w| %>
     <%= w.title %> has <%= w.circuit_count %> circuits!
     <br><br>
 
     <% end %>
-
-<p>Keep it up!</p>
+</h4>
+<p><h3>Keep it up!</h3></p>

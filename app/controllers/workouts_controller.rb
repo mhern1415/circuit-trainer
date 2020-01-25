@@ -1,4 +1,6 @@
 class WorkoutsController < ApplicationController
+  before_action :find_workout, only: [:show]
+
   def index
     @workouts = current_user.workouts
   end
@@ -42,5 +44,10 @@ class WorkoutsController < ApplicationController
       params.require(:workout).permit(:title, :description, :circuit_count)
   end
   
+  def find_workout
+    @workout = Workout.find_by(id: params[:id])
+    redirect_to workouts_path if !@workout
+  end
+
   end
   

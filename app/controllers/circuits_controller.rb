@@ -1,4 +1,5 @@
 class CircuitsController < ApplicationController
+    before_action :find_circuit, only: [:show]
     skip_before_action :require_login, only: [:index]
 def index
     if params[:exercise_id] && @exercise = Exercise.find_by_id(params[:exercise_id])
@@ -43,6 +44,9 @@ def circuit_params
     params.require(:circuit).permit(:date, :category, :workout_id, :exercise_id, exercise_attributes:[:name, :category, :reps, :user_id])
 end
 
-
+def find_circuit
+    @circuit = Circuit.find_by(id: params[:id])
+    redirect_to circuits_path if !@circuit
+end
 
 end

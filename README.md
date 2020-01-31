@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application was created to assist users plan a circuit training workout.
 
-Things you may want to cover:
+Aftern cloning the application to your machine, please enter the project directory and run 'rails s' into your terminal and navigate to the proper url. 
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

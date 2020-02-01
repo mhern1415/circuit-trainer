@@ -3,7 +3,6 @@ class CircuitsController < ApplicationController
     skip_before_action :require_login, only: [:index]
 def index
     if params[:exercise_id] && @exercise = Exercise.find_by_id(params[:exercise_id])
-        #Exercise.find_by(id: params[:workout_id])
         @circuits = @exercise.circuits
     elsif params[:workout_id] && @workout = Workout.find_by_id(params[:workout_id])
         
@@ -22,7 +21,7 @@ def new
         @circuit = @exercise.circuits.build 
     else
         @circuit = Circuit.new
-        @circuit.build_exercise
+       
     end
 end
 

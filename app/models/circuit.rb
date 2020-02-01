@@ -4,7 +4,7 @@ class Circuit < ApplicationRecord
 
 
   validates :date, presence: true
-  #accepts_nested_attributes_for :exercise 
+  
   def exercise_attributes=(exercise_params)
     exercise = Exercise.find_or_create_by(exercise_params)
     if exercise.valid?

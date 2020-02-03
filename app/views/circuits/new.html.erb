@@ -18,7 +18,7 @@
 
 <%= render partial: "layouts/errors", locals: { object: @circuit } %>
 
-<%= f.collection_select :workout_id, Workout.all, :id, :title %>
+<%= f.collection_select :workout_id, current_user.workouts, :id, :title %>
 <br></br>
 <% if @exercise %>
 <p> Exercise: <%= @exercise.name %></p>

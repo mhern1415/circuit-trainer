@@ -21,7 +21,6 @@ def new
         @circuit = @exercise.circuits.build 
     else
         @circuit = Circuit.new
-       
     end
 end
 
